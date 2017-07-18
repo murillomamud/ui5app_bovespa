@@ -1,0 +1,17 @@
+<mvc:View controllerName="cloud.apiservicebovespabovespa.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Ações Bovespa">
+				<content>
+					<PullToRefresh id="pullToRefresh" refresh="handleRefresh" />
+					<Button text="Visualizar Gráficos" press="onPressGraf" />
+					<TileContainer id="container" tileDelete="handleTileDelete" tiles="{/dados}">
+						<StandardTile icon="sap-icon://loan" number="{valor}" numberUnit="R$" title="{indice}" info="{variacaoR$}"
+							infoState="{state}"/>
+					</TileContainer>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

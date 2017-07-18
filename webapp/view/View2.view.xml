@@ -1,0 +1,28 @@
+<mvc:View controllerName="cloud.apiservicebovespabovespa.controller.View2" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls" displayBlock="true" xmlns="sap.m" xmlns:data="sap.viz.ui5.data"
+	xmlns:feeds="sap.viz.ui5.controls.common.feeds">
+	<Page title="Gráfico Variação Valor Ações" showNavButton = "true" navButtonPress="onPressGoBack">
+		<content>
+			<viz:VizFrame width="100%" height="100%" vizType="line" vizProperties="{title:{ text:'Ações Bovespa' }}">
+				<viz:dataset>
+					<data:FlattenedDataset data="{/dados}">
+						<data:dimensions>
+							<data:DimensionDefinition name="Ação" value="{indice}"></data:DimensionDefinition>
+						</data:dimensions>
+						<data:measures>
+							<data:MeasureDefinition name="Variação" value="{variacaoR$}"></data:MeasureDefinition>
+						</data:measures>
+						<data:measures>
+							<data:MeasureDefinition name="Variação %" value="{variacaoPerc}"></data:MeasureDefinition>
+						</data:measures>									
+					</data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<feeds:FeedItem uid="categoryAxis" type="Dimension" values="Ação"></feeds:FeedItem>
+					<feeds:FeedItem uid="valueAxis" type="Measure" values="Variação"></feeds:FeedItem>
+					<feeds:FeedItem uid="valueAxis" type="Measure" values="Variação %"></feeds:FeedItem>
+				</viz:feeds>
+			</viz:VizFrame>
+		</content>
+	</Page>
+</mvc:View>
