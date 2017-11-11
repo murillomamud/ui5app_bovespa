@@ -18,7 +18,7 @@ sap.ui.define([
 			var pull = evt.getSource();	
 			var oComponent = this.getOwnerComponent();
 
-			var sUrl = "https://immense-tor-36593.herokuapp.com/";
+			var sUrl = "https://afternoon-journey-55257.herokuapp.com/";
 			var oModel = new JSONModel(sUrl);
 			oComponent.setModel(oModel); //this neste caso é o component					
 
