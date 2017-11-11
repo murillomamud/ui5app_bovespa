@@ -24,7 +24,7 @@ sap.ui.define([
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
 
-			var sUrl = "https://immense-tor-36593.herokuapp.com/";
+			var sUrl = "https://afternoon-journey-55257.herokuapp.com/";
 			var oModel = new JSONModel(sUrl);
 			this.setModel(oModel); //this neste caso é o component		
 
